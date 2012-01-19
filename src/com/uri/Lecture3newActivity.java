@@ -44,15 +44,12 @@ public class Lecture3newActivity extends Activity {
 		        for (int i = 0; i < 10; i++) {
 		        	if (rand.nextBoolean()) {
 		        		Log.i("bank", "Apple withdrawing from Balge.");
-			        	new Thread(new BankThread("Apple", b1, b2, parent, 50, 10, 1000)).start();
+			        	new Thread(new BankThread("Apple", b1, b2, parent, 50, 10, 100)).start();
 			        } else {
 			        	Log.i("bank", "Bagel withdrawing from Apple.");
-			        	new Thread(new BankThread("Bagel", b2, b1, parent, 30, 10, 1000)).start();	
+			        	new Thread(new BankThread("Bagel", b2, b1, parent, 30, 10, 100)).start();	
 			        }
-		        	try {
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-					}
+		        	
 		
 		        }
 			}
